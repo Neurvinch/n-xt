@@ -12,9 +12,12 @@ interface TodoListProps {
 const TodoList = ({todos, onDelete}:TodoListProps) => {
   return (
     <div>
-        <ul>
+        <ul className="space-y-2">
             {todos.map( (todo) => (
-                <li>
+                <li
+                 className="flex items-center justify-between rounded border p-2"
+                 key={todo.id}
+                >
                     <span>{todo.text}</span>
                     <button
                       onClick={() => onDelete(todo.id)}

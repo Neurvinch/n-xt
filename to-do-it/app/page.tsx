@@ -39,7 +39,7 @@ export default function Home() {
 
 
   return (
-    <main>
+    <main className="mx-auto max-w-md p-4">
     <h1 className="mb-4 text-2xl font-bold">Todo List</h1>
       <TodoForm onAdd={addTodo} />
       <TodoList todos={todos} onDelete={deletedTodo} />
