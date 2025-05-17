@@ -15,9 +15,24 @@ const TodoForm = ({onAdd} : TodoFormProps) => {
             onAdd(text);
             setText("");
         }
-    }
+    };
   return (
-    <div>TodoForm</div>
+    <div>
+        <form onSubmit={handleSubmit}>
+        <input
+          type='submit'
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          placeholder=' Place a <>'
+        />
+        <button 
+        type='submit'
+        
+        >
+            Add
+        </button>
+        </form>
+    </div>
   )
 }
 
