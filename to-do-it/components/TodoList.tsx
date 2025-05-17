@@ -11,7 +11,20 @@ interface TodoListProps {
 }
 const TodoList = ({todos, onDelete}:TodoListProps) => {
   return (
-    <div>TodoList</div>
+    <div>
+        <ul>
+            {todos.map( (todo) => (
+                <li>
+                    <span>{todo.text}</span>
+                    <button
+                      onClick={() => onDelete(todo.id)}
+                    >
+                        Delete
+                    </button>
+                </li>
+            ))}
+        </ul>
+    </div>
   )
 }
 
