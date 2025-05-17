@@ -1,13 +1,13 @@
 import React from 'react'
 
 interface Todo {
-    id: Number;
+    id: number;
     text: string;
 }
 
 interface TodoListProps {
     todos: Todo[];
-    onDelete: (id:Number) => void;
+    onDelete: (id:number) => void;
 }
 const TodoList = ({todos, onDelete}:TodoListProps) => {
   return (
