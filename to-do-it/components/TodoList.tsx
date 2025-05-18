@@ -21,6 +21,7 @@ const TodoList = ({todos, onDelete}:TodoListProps) => {
                     <span>{todo.text}</span>
                     <button
                       onClick={() => onDelete(todo.id)}
+                      className="text-red-500 hover:text-red-700"
                     >
                         Delete
                     </button>

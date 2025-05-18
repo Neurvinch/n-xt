@@ -1,4 +1,5 @@
-'use client'
+'use client';
+
 import { useState, useEffect } from "react";
 import TodoForm from "@/components/TodoForm";
 import TodoList from "@/components/TodoList";
@@ -27,7 +28,7 @@ export default function Home() {
     const addTodo = (text: string) => {
       const newTodo : Todo = {
         id: Date.now(),
-        text: text,
+         text,
       };
       setTodos([newTodo, ...todos]);
     }
